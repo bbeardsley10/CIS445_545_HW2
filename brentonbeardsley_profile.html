@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/nmv3wbg.css">   
+    <link rel="icon" href="/Homework2/CIS445_545_HW2/pics/ps5.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Passion+One:wght@400;700;900&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<title>Homework 2</title>
+
+    <style>
+        @media (max-width: 768px) {
+            .top {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            img.me {
+                width: 100%;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+
+        html{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            scroll-behavior: smooth;
+        }
+        .passion-one-regular {
+        font-family: "Passion One2", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+        .passion-one-bold {
+        font-family: "Passion One1", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+
+        .passion-one-black {
+        font-family: "Passion One", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        }
+        .luckiest-guy-regular {
+        font-family: "Luckiest Guy", cursive;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        *{
+            font-weight: 400;
+            font-style: normal;
+            color: white;
+            margin: 0px;
+        }
+        .intro{
+            /* font-family: 'Corben', Georgia, Times, serif; */
+            font-family: "Luckiest Guy";
+            font-size: xx-large;
+            text-decoration: none;
+            color: white;
+        } 
+        em{
+            font-weight: bold;
+            color: red;
+        }
+        p{
+            font-family: "VT323";
+            font-size: 30px;
+            color: white;
+        }
+        /* h1{
+            /* background-color: rgb(0, 187, 255); */
+            /* text-align: center;
+            padding: 10px;
+            margin-left: 650px;
+            margin-right: 650px;
+            font-style: italic; */
+            /* margin-right: 450px; 
+            color: white;
+            font-size: xxx-large;
+            /* width: 600px; */
+            /* text-align: center; 
+            font-family: "Passion One";
+        } */
+        h2{
+            /* margin-left: 350px; */
+            font-size: 38px;
+            font-family: "VT323";
+        }
+        .header{
+            color: #23395B;
+            font-size:xx-large;
+            text-decoration: underline;
+            font-family: "VT323";
+        }
+        table{
+            text-align: left;
+        }
+        tbody{
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            font-family: "VT323";
+            text-align: left;
+        }
+        td{
+            text-align: center;
+            padding: 5px;
+        }
+        .IM:hover{
+            color: pink;
+        }
+
+        .RM:hover{
+            color: yellow;
+        }
+        .PS:hover{
+            color: purple;
+        }
+
+        .PBS:hover{
+            color: yellow;
+        }
+        .CW:hover{
+            color:black;
+        }
+
+        .AR:hover{
+            color: rgb(5, 181, 240);
+        }
+        .top{
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            gap: 40px;
+            background-color: #333; 
+
+        }
+
+        img.me {
+            max-width: 100%; 
+            height: auto;
+        }
+        
+
+
+
+        .navbar {
+        background-color: #333; 
+        overflow: hidden; 
+        }
+
+        .navbar ul {
+            list-style-type: none; 
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            justify-content: center; 
+            background-color: #333; 
+        }
+
+        .navbar li {
+            display: inline;
+        }
+
+        .navbar a {
+            display: inline-block;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: white; /* Text color */
+            font-size: 25px;
+            font-family: "VT323";
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd; 
+            color: black; 
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        #categories td{
+            padding: 15px;
+            margin-right: 20px;
+            text-decoration: underline;
+        }
+
+
+        #hobbies, #favorite-sports-teams {
+            padding-top: 60px; 
+        }
+
+        #hobbies, .hobbies{
+            background-color: #406E8E;
+            font-family: "VT323";
+        }
+        #hobbies td {
+            background-color: #406E8E; 
+            font-family: "VT323";
+        }
+
+        #about-me, .about-me{
+            background-color: #23395B;
+            font-family: "VT323";
+        }
+
+        .description, .description em{
+            background-color: #23395B;
+        }
+        #favorite-sports-teams, .fav-team{
+            background-color: #5478A0;
+            font-family: "VT323";
+        }
+        #favorite-sports-teams td, #favorite-sports-teams table{
+            background-color: #5478A0;
+            font-family: "VT323";
+        }
+        .traveled{
+            background-color: #4FE3C1;
+            font-family: "VT323";
+        }
+
+        #places-traveled{
+            background-color: #4FE3C1;
+        }
+
+        section {
+            padding: 50px;
+            margin: 0; 
+            width: 100%; 
+            box-sizing: border-box; 
+            height: 500px;
+            background-attachment: fixed;
+        }
+
+
+        .text-container p{
+            font-family: "VT323";
+            text-decoration: none;
+
+        }
+        .text-container p em{
+            color: orange;
+        }
+        .text-container .im{
+            font-size: 80px;
+            margin: 0;
+        }
+
+        .text-container .name{
+            padding: 0px;
+            font-size: 60px;
+            margin-top: -5px;
+        }
+
+        .text-container .intro{
+            font-size: 60px;
+            margin-bottom: -5px;
+        }
+        .vt323-regular {
+        font-family: "VT323", monospace;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .me:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+            }
+
+        footer{
+            background-color: #4FE3C1;
+            color: white;
+            text-align: center;
+            padding-bottom: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a:hover {
+        text-decoration: underline;
+        }
+        footer a {
+            text-decoration: none;
+            color: white;
+            background-color: #4FE3C1;
+        }
+        footer p{
+            background-color: #4FE3C1;
+        }
+
+
+        .team-row {
+        display: flex; 
+        justify-content: flex-start;
+        align-items: center;
+        padding: 10px 0; 
+        }
+
+        .team-name {
+            font-size: 35px;
+            font-family: "VT323";
+            padding-right: 20px; 
+        }
+
+        .team-logo img {
+            width: 125px;
+            height: auto;
+        }
+
+        .about-content {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .about-text {
+            max-width: 60%; 
+            padding-right: 10px; 
+        }
+
+        .about-image img {
+            width: 550px;  
+            height: auto; 
+        }
+
+        #places-traveled p{
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        #plane-img{
+            margin-top: -170px;
+        }
+        
+
+    </style>
+</head>
+<body>
+      <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="#about-me">_aboutMe</a></li>
+            <li><a href="#hobbies">_hobbies</a></li>
+            <li><a href="#favorite-sports-teams">_favoriteSportsTeams</a></li>
+            <li><a href="#places-traveled">_placesTraveled</a></li>
+        </ul>
+    </nav>
+    <div class="top">
+        <img src="/Homework2/CIS445_545_HW2/pics/me3.png" alt="" width="350px" class="me">
+
+        <div class="text-container">
+            <p class="intro">Welcome!</p>
+            <p class="im">I<em>'</em>m</p>
+            <p class="name">Brenton Beardsley</p>
+        </div>
+        
+    </div>
+
+    <section id="about-me">
+        <h2 class="about-me">&lt;aboutMe&gt;</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="description">// I am a senior at Bradley University majoring in Computer Science</p>
+                <p class="description">// I am from small town called Streator, IL</p>
+                <p class="description">// When I am not involved in my schoolwork, I like to unwind by spending time</p>
+                    <p class="description">// outdoors or playing video games with my friends.</p>
+            </div>
+            <div class="about-image">
+                <a href="https://www.bradley.edu" target="_blank">
+                    <img src="/Homework2/CIS445_545_HW2/pics/bradleyHall.jpg" alt="" width="400px">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="hobbies">
+        <h2 class="hobbies">&lt;hobbies&gt;</h2>
+        <table class="hobbies">
+            <tr id="categories">
+                <td>Playing Sports</td>
+                <td>Playing Video Games</td>
+                <td>Traveling to Different Places</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-futbol" style="margin-right: 8px;"></i>
+                    - Soccer
+                </td>
+                
+                <td> - Rocket League</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-basketball-ball" style="margin-right: 8px;"></i>
+                    - Basketball
+                </td>
+                <td> - Valorant</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-table-tennis" style="margin-right: 8px;"></i>
+                    - Pickleball
+                </td>
+                <td> - COD Zombies</td>
+            </tr>
+            <tr>
+                <td>
+                    <i class="fas fa-running" style="margin-right: 8px;"></i>
+                    - Running
+                </td>
+                <td> - CSGO</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td style="text-align: center;" colspan="3">
+                    <img src="/Homework2/CIS445_545_HW2/pics/plane2.png" alt="" width="230px" id="plane-img">
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="favorite-sports-teams">
+        <h2 class="fav-team">&lt;favoriteSportsTeams&gt;</h2>
+        <table>
+            <tbody>  
+                <tr class="team-row">
+                    <td class="team-name CW">Chicago White Sox</td>
+                    <td class="team-logo"><img src="/Homework2/CIS445_545_HW2/pics/whitesox.png" alt="" width="100px"></td>
+                    <td class="team-name IM">Inter Miami</td>
+                    <td class="team-logo"><img src="/Homework2/CIS445_545_HW2/pics/intermiami.png" alt="" width="100px"></td>
+                    <td class="team-name RM">Real Madrid</td>
+                    <td class="team-logo"><img src="/Homework2/CIS445_545_HW2/pics/realmadrid.png" alt="" width="100px"></td>
+                </tr>
+                <tr class="team-row">
+                    <td class="team-name PBS">Pittsburgh Steelers</td>
+                    <td class="team-logo"><img src="/Homework2/CIS445_545_HW2/pics/steelers.png" alt="" width="100px"></td>
+                    <td class="team-name PS">Phoenix Suns</td>
+                    <td class="team-logo"><img src="/Homework2/CIS445_545_HW2/pics/phoenixsuns.png" alt="" width="100px"></td>
+                    <td class="team-name AR">Argentina National Team</td>
+                    <td class="team-logo"><img src="/Homework2/CIS445_545_HW2/pics/argentina.png" alt="" width="100px"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+
+    <section id="places-traveled">
+        <h2 class="traveled">&lt;placesTraveled&gt;</h2>
+        <p>// I have been to 20 States in the United States and I have also been to Mexico</p>
+        <div class="image-gallery">
+            <img src="/Homework2/CIS445_545_HW2/pics/traveled.png" alt="" width="400px">
+            <img src="/Homework2/CIS445_545_HW2/pics/pikesPeak.png" alt="" width="250px">
+            <img src="/Homework2/CIS445_545_HW2/pics/colorado.png" alt="" width="250px">
+            <img src="/Homework2/CIS445_545_HW2/pics/mexico.png" alt="" width="250px">
+            <img src="/Homework2/CIS445_545_HW2/pics/disney.png" alt="" width="250px">
+            <img src="/Homework2/CIS445_545_HW2/pics/IMG_4530.png" alt="" width="250px">
+        </div>
+    </section>
+    
+</body>
+<footer>
+    <p>&copy; 2024 Brenton Beardsley | 
+        <a href="#navbar">Back To Top</a>
+    </p>
+</footer>
+
+</html>
